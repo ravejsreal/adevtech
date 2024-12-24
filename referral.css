@@ -1,0 +1,84 @@
+.upcoming-section {
+    min-height: 100vh;
+    display: flex;
+    padding-top: 80px;
+    background: #1a1a2e;
+    overflow: hidden;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-container h1 {
+    font-size: 5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.animation-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.rocket {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    animation: rocketFloat 2s ease-in-out infinite;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    animation: starMove 4s linear infinite;
+}
+
+@keyframes rocketFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -55%);
+    }
+}
+
+@keyframes starMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .upcoming-section {
+        flex-direction: column;
+    }
+
+    .content-container h1 {
+        font-size: 3rem;
+    }
+
+    .rocket {
+        font-size: 120px;
+    }
+}

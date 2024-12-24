@@ -1,0 +1,1187 @@
+/* Base Styles */
+:root {
+    --primary-color: #800020;
+    --secondary-color: #CC0000;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+    padding: 8rem 0 6rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards 0.3s;
+    max-width: 600px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(128, 0, 32, 0.15);
+    opacity: 0;
+    animation: slideIn 0.8s ease forwards;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards 0.5s;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    border-left: 4px solid var(--primary-color);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards 0.7s;
+}
+
+/* Vision Mission Section */
+.vision-mission {
+    padding: 6rem 0;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vision-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 2rem;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.vision-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.vision-card p {
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+.card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+.bg-shape {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+/* Purpose Section */
+.purpose-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.purpose-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.purpose-text {
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.highlight-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.purpose-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.purpose-visual {
+    position: relative;
+    height: 600px;
+}
+
+.innovation-visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tech-grid {
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(90deg, rgba(128, 0, 32, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(128, 0, 32, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: rotateGrid 20s linear infinite;
+}
+
+.ai-processor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: grid;
+    place-items: center;
+}
+
+.processor-core i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.connection-lines {
+    position: absolute;
+    inset: 0;
+}
+
+.connection-line {
+    position: absolute;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+.connection-line:nth-child(1) { top: 30%; left: 50%; transform: rotate(-45deg); }
+.connection-line:nth-child(2) { top: 70%; left: 50%; transform: rotate(45deg); }
+.connection-line:nth-child(3) { top: 50%; left: 30%; transform: rotate(90deg); }
+.connection-line:nth-child(4) { top: 50%; right: 30%; transform: rotate(90deg); }
+
+.data-flow {
+    position: absolute;
+    inset: 0;
+}
+
+.data-particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: moveParticle 3s linear infinite;
+}
+
+.feature-cards {
+    position: absolute;
+    inset: 0;
+}
+
+.feature-card {
+    position: absolute;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.feature-card span {
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.feature-card:nth-child(1) { top: 20%; left: 10%; }
+.feature-card:nth-child(2) { top: 20%; right: 10%; }
+.feature-card:nth-child(3) { bottom: 20%; left: 10%; }
+.feature-card:nth-child(4) { bottom: 20%; right: 10%; }
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateGrid {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveParticle {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(300px, 300px);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .cards-container {
+        gap: 1.5rem;
+    }
+    
+    .vision-card {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content,
+    .purpose-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4rem;
+    }
+    
+    .hero-description {
+        padding-left: 0;
+        border-left: none;
+        text-align: left;
+    }
+    
+    .recruitment-ai {
+        margin-top: 3rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .purpose-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .recruitment-ai {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .processing-rings {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .insight-card {
+        padding: 0.6rem 1rem;
+    }
+    
+    .insight-card span {
+        font-size: 0.8rem;
+    }
+    
+    .vision-card {
+        padding: 2rem;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background: #f8f9fa;
+    padding: 4rem 0 2rem;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom p {
+    color: #4a4a4a;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-section h3 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Add animation for the hero visual */
+.hero-visual {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: none !important;
+    perspective: none !important;
+}
+
+.recruitment-ai {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: none !important;
+}
+
+.ai-core {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(128, 0, 32, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: floatCore 6s ease-in-out infinite;
+    transform-style: flat !important;
+    perspective: none !important;
+    backface-visibility: visible !important;
+}
+
+.core-circle {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.core-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    animation: ripple 2s ease-out infinite;
+}
+
+.core-grid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(90deg, rgba(128, 0, 32, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(128, 0, 32, 0.1) 1px, transparent 1px);
+    background-size: 10px 10px;
+    border-radius: 50%;
+    animation: rotateCore 15s linear infinite;
+}
+
+/* Data Streams */
+.data-streams {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    animation: rotateStreams 20s linear infinite;
+}
+
+.stream {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.stream.s1 { transform: rotate(45deg) translateX(120px); }
+.stream.s2 { transform: rotate(135deg) translateX(120px); }
+.stream.s3 { transform: rotate(225deg) translateX(120px); }
+.stream.s4 { transform: rotate(315deg) translateX(120px); }
+
+.data-point {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: pulsePoint 2s ease-in-out infinite;
+    opacity: 1 !important;
+}
+
+.data-point i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    animation: rotateIcon 4s linear infinite;
+    opacity: 1 !important;
+}
+
+.data-line {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    height: 3px;
+    width: 120px;
+    background: linear-gradient(90deg, 
+        rgba(128, 0, 32, 0.4), 
+        rgba(128, 0, 32, 0));
+    transform-origin: left;
+    animation: growLine 2s ease-in-out infinite;
+}
+
+/* Insight Cards */
+.ai-insights {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 3;
+}
+
+.insight-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transform-origin: right;
+    animation: floatCard 4s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform-style: flat !important;
+    perspective: none !important;
+    backface-visibility: visible !important;
+}
+
+.insight-card i {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    animation: pulseIcon 2s ease-in-out infinite;
+}
+
+.insight-card span {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* Processing Rings */
+.processing-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    z-index: 0;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(128, 0, 32, 0.1);
+    animation: rotateRing 20s linear infinite;
+}
+
+.ring.r1 {
+    width: 100%;
+    height: 100%;
+    border-width: 3px;
+    border-style: dashed;
+}
+
+.ring.r2 {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-direction: reverse;
+    animation-duration: 15s;
+}
+
+.ring.r3 {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-duration: 10s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add these new keyframe animations */
+@keyframes floatCore {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateCore {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateStreams {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulsePoint {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes growLine {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulseIcon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modify the insight cards to have staggered animations */
+.insight-card.ic1 {
+    animation: floatCard 4s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.insight-card.ic2 {
+    animation: floatCard 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.insight-card.ic3 {
+    animation: floatCard 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* Add animation delays to data streams */
+.stream.s1 { 
+    transform: rotate(45deg) translateX(120px);
+    animation: pulsePoint 2s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.stream.s2 { 
+    transform: rotate(135deg) translateX(120px);
+    animation: pulsePoint 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.stream.s3 { 
+    transform: rotate(225deg) translateX(120px);
+    animation: pulsePoint 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.stream.s4 { 
+    transform: rotate(315deg) translateX(120px);
+    animation: pulsePoint 2s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Enhance ring animations */
+.ring.r1 {
+    animation: rotateRing 20s linear infinite;
+}
+
+.ring.r2 {
+    animation: rotateRing 15s linear infinite reverse;
+}
+
+.ring.r3 {
+    animation: rotateRing 10s linear infinite;
+}
+
+/* Add a subtle floating animation to the entire hero visual */
+.hero-visual {
+    animation: floatCore 8s ease-in-out infinite;
+}
+
+/* Add these responsive styles at the end of the file */
+@media (max-width: 1400px) {
+    .hero-content {
+        gap: 4rem;
+    }
+
+    .hero-visual {
+        height: 500px;
+    }
+
+    .processing-rings {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ai-insights {
+        right: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-visual {
+        height: 450px;
+    }
+
+    .processing-rings {
+        width: 300px;
+        height: 300px;
+    }
+
+    .ai-core {
+        width: 120px;
+        height: 120px;
+    }
+
+    .insight-card {
+        padding: 15px 25px;
+    }
+
+    .insight-card i {
+        font-size: 1.4rem;
+    }
+
+    .insight-card span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero {
+        padding: 6rem 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        margin: 0 auto;
+    }
+
+    .hero-description {
+        padding-left: 0;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-visual {
+        height: 400px;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    .processing-rings {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ai-core {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stream.s1 { transform: rotate(45deg) translateX(90px); }
+    .stream.s2 { transform: rotate(135deg) translateX(90px); }
+    .stream.s3 { transform: rotate(225deg) translateX(90px); }
+    .stream.s4 { transform: rotate(315deg) translateX(90px); }
+
+    .data-point {
+        width: 40px;
+        height: 40px;
+    }
+
+    .data-point i {
+        font-size: 1.2rem;
+    }
+
+    .data-line {
+        width: 80px;
+    }
+
+    .ai-insights {
+        right: 20px;
+        gap: 15px;
+    }
+
+    .insight-card {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 5rem 0;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-visual {
+        height: 350px;
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+
+    .processing-rings {
+        width: 200px;
+        height: 200px;
+    }
+
+    .stream.s1 { transform: rotate(45deg) translateX(70px); }
+    .stream.s2 { transform: rotate(135deg) translateX(70px); }
+    .stream.s3 { transform: rotate(225deg) translateX(70px); }
+    .stream.s4 { transform: rotate(315deg) translateX(70px); }
+
+    .ai-insights {
+        right: 15px;
+        gap: 10px;
+    }
+
+    .insight-card {
+        padding: 10px 15px;
+    }
+
+    .insight-card i {
+        font-size: 1.2rem;
+    }
+
+    .insight-card span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        padding: 4rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-tag {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+
+    .processing-rings {
+        width: 180px;
+        height: 180px;
+    }
+
+    .ai-core {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stream.s1 { transform: rotate(45deg) translateX(60px); }
+    .stream.s2 { transform: rotate(135deg) translateX(60px); }
+    .stream.s3 { transform: rotate(225deg) translateX(60px); }
+    .stream.s4 { transform: rotate(315deg) translateX(60px); }
+
+    .data-point {
+        width: 35px;
+        height: 35px;
+    }
+
+    .data-point i {
+        font-size: 1rem;
+    }
+
+    .data-line {
+        width: 60px;
+        height: 2px;
+    }
+
+    .ai-insights {
+        right: 10px;
+        gap: 8px;
+    }
+
+    .insight-card {
+        padding: 8px 12px;
+    }
+
+    .insight-card i {
+        font-size: 1rem;
+    }
+
+    .insight-card span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Fix for landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    .about-hero {
+        min-height: auto;
+        padding: 5rem 0;
+    }
+
+    .hero-visual {
+        height: 300px;
+    }
+} 
